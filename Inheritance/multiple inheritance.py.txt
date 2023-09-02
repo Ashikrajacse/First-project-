@@ -1,0 +1,16 @@
+class A:
+    aname = ''
+    def aclass(self):
+        print (self.aname)
+class B:
+    bname = ''
+    def bclass(self):
+        print (self.bname)
+class C(A, B):
+    def cname(self):
+        print ('B :', self.bname)
+        print ('A :', self.aname)
+s1 = C()
+s1.bname = 'ram'
+s1.aname = 'sita'
+s1.cname()

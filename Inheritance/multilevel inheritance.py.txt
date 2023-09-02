@@ -1,0 +1,24 @@
+class A:
+    def __init__(self, aname):
+        self.aname = aname
+class B(A):
+
+    def __init__(self, bname, aname):
+        self.bname = bname
+        A.__init__(self, aname)
+class C(B):
+    def __init__(
+        self,
+        cname,
+        bname,
+        aname,
+        ):
+        self.cname = cname
+        B.__init__(self, bname, aname)
+    def display(self):
+        print ('A name :', self.aname)
+        print ('B name :', self.bname)
+        print ('C name :', self.cname)
+s1 = C('Rohit', 'Mohit', 'Lalit')
+print (s1.aname)
+s1.display()
